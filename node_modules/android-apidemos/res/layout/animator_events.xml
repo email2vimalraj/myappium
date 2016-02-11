@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2010 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/container">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Play" android:id="@+id/startButton" android:contentDescription="Play"/>
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cancel" android:id="@+id/cancelButton" android:contentDescription="Cancel"/>
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="End" android:id="@+id/endButton" android:contentDescription="End"/>
+        <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="End Immediately" android:id="@+id/endCB" android:contentDescription="End Immediately"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sequencer Events:   " android:contentDescription="Sequencer Events:   "/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Start   " android:id="@+id/startText" android:contentDescription="Start   "/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Repeat   " android:id="@+id/repeatText" android:contentDescription="Repeat   "/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cancel   " android:id="@+id/cancelText" android:contentDescription="Cancel   "/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="End" android:id="@+id/endText" android:contentDescription="End"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Animator Events:   " android:contentDescription="Animator Events:   "/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Start   " android:id="@+id/startTextAnimator" android:contentDescription="Start   "/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Repeat   " android:id="@+id/repeatTextAnimator" android:contentDescription="Repeat   "/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cancel   " android:id="@+id/cancelTextAnimator" android:contentDescription="Cancel   "/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="End" android:id="@+id/endTextAnimator" android:contentDescription="End"/>
+    </LinearLayout>
+</LinearLayout>

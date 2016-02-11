@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.appium.gappium.sampleapp" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>HelloGappium</name>
+    <description>
+        A sample Apache Cordova application for Appium + Cordova (Gappium)
+        Courtesy of Christophe Coenraets (https://github.com/ccoenraets/directory-backbone-topcoat)
+    </description>
+    <author email="appium-discuss@googlegroups.com" href="http://appium.io">
+        Appium Contributors
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="true" />
+</widget>

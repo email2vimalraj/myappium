@@ -126,7 +126,7 @@ reset_npm() {
         run_cmd npm install --production $shrinkwrap_opt .
     else
         echo "* Installing new or updated NPM modules (including devDeps)"
-        run_cmd npm install $shrinkwrap_opt .
+        # run_cmd npm install $shrinkwrap_opt .
     fi
 }
 

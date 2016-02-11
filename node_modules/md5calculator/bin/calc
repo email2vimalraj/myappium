@@ -1,0 +1,56 @@
+#!/usr/bin/env node
+var calc = require('../src/calculator'),
+    fs = require('fs'),
+    event = require('../src/event'),
+    path= require('path'),
+    options = process.argv.slice(2, process.argv.length),
+    _console = require('../src/utils/console');
+var verbose = false;
+
+if(options.length >2 || options.length <1){
+    help();
+}
+var currentArg,filePath, calculator;
+while( currentArg = options.shift()){
+    if( currentArg == '-d'){
+        verbose = true;
+    }else if(currentArg === 'help'){
+        help();
+    }
+    else{
+        filePath = currentArg;
+        break;
+    }
+}
+event.on('error', _console.error);
+if(verbose){
+    event.on('log', _console.log);
+    event.on('warn', _console.warn);
+    event.on('info', _console.info);
+}
+process.on('uncaughtException', function(err){
+    if (verbose) {
+        _console.error(err.stack);
+    } else {
+        _console.error(err);
+    }
+    process.exit(1);
+});
+
+if(filePath){
+    calc(filePath, function(e, md5){
+        if(e){
+            _console.error(e);
+        }else{
+            console.log("md5:" + md5);
+        }
+    });
+}else{
+   help();
+}
+
+function help(){
+    var info = fs.readFileSync(path.join(__dirname,'..', 'doc/help.txt'), 'utf-8');
+    console.log(info);
+    process.exit(1);
+}
